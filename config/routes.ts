@@ -73,6 +73,34 @@
 		layout: false,
 		hideInMenu: true,
 	},
+	// thực hành 2 Ngân hàng câu hỏi 
+	{
+  name: 'Ngân hàng câu hỏi',
+  path: '/ngan-hang',
+  icon: 'DatabaseOutlined',
+  routes: [
+    {
+      name: 'Khối kiến thức',
+      path: '/ngan-hang/khoi-kien-thuc',
+      component: './KhoiKienThuc',
+    },
+    {
+      name: 'Môn học',
+      path: '/ngan-hang/mon-hoc',
+      component: './MonHoc',
+    },
+    {
+      name: 'Câu hỏi',
+      path: '/ngan-hang/cau-hoi',
+      component: './CauHoi',
+    },
+    {
+      name: 'Đề thi',
+      path: '/ngan-hang/de-thi',
+      component: './DeThi',
+    },
+  ],
+},
 	{
 		path: '/',
 	},
@@ -89,4 +117,5 @@
 	{
 		component: './exception/404',
 	},
+
 ];
