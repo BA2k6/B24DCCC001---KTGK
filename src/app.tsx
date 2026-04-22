@@ -78,7 +78,6 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
 		noFound: <NotFoundContent />,
 		rightContentRender: () => <RightContent />,
 		disableContentMargin: false,
-
 		footerRender: () => <Footer />,
 
 		onPageChange: () => {

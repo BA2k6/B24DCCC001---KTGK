@@ -40,12 +40,12 @@ const KhoiKienThucPage = () => {
         style={{ marginTop: 16 }}
       />
 
-      <Modal
-        title="Thêm khối kiến thức"
-        open={open}
-        onCancel={() => setOpen(false)}
-        onOk={() => form.submit()}
-      >
+<Modal
+  title="Thêm"
+  visible={open}
+  onCancel={() => setOpen(false)}
+  onOk={() => form.submit()}
+>
         <Form form={form} layout="vertical" onFinish={onFinish}>
           <Form.Item
             label="Mã khối"

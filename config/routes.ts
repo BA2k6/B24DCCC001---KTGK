@@ -25,12 +25,18 @@
 		icon: 'HomeOutlined',
 	},
 	{
+	path: '/course',
+	name: 'Quản lý khóa học',
+	icon: 'BookOutlined',
+	component: './Course',
+	},
+	{
 		path: '/gioi-thieu',
 		name: 'About',
 		component: './TienIch/GioiThieu',
 		hideInMenu: true,
 	},
-	{
+	/*{
 		path: '/random-user',
 		name: 'RandomUser',
 		component: './RandomUser',
@@ -74,7 +80,7 @@
 		hideInMenu: true,
 	},
 	// thực hành 2 Ngân hàng câu hỏi 
-	{
+	 {
   name: 'Ngân hàng câu hỏi',
   path: '/ngan-hang',
   icon: 'DatabaseOutlined',
@@ -100,7 +106,7 @@
       component: './DeThi',
     },
   ],
-},
+},*/
 	{
 		path: '/',
 	},
