@@ -9,7 +9,6 @@ const teachers = ['Nguyen Van A', 'Tran Thi B'];
 export default ({ visible, onCancel, onSubmit, initialValues }: any) => {
   const [form] = Form.useForm();
 
-  // reset + set dữ liệu khi mở form
   useEffect(() => {
     if (visible) {
       form.resetFields();
@@ -35,7 +34,6 @@ export default ({ visible, onCancel, onSubmit, initialValues }: any) => {
     >
       <Form form={form} layout="vertical">
 
-        {/* TÊN KHÓA HỌC */}
         <Form.Item
           name="name"
           label="Tên khóa học"
@@ -47,7 +45,6 @@ export default ({ visible, onCancel, onSubmit, initialValues }: any) => {
           <Input />
         </Form.Item>
 
-        {/* GIẢNG VIÊN */}
         <Form.Item
           name="teacher"
           label="Giảng viên"
@@ -56,7 +53,6 @@ export default ({ visible, onCancel, onSubmit, initialValues }: any) => {
           <Select options={teachers.map(t => ({ label: t, value: t }))} />
         </Form.Item>
 
-        {/* SỐ HỌC VIÊN */}
         <Form.Item
           name="students"
           label="Số học viên"
@@ -65,7 +61,6 @@ export default ({ visible, onCancel, onSubmit, initialValues }: any) => {
           <InputNumber min={0} style={{ width: '100%' }} />
         </Form.Item>
 
-        {/* 🔥 HTML EDITOR - REACT QUILL */}
         <Form.Item name="description" label="Mô tả khóa học">
           <ReactQuill
             theme="snow"
@@ -77,7 +72,6 @@ export default ({ visible, onCancel, onSubmit, initialValues }: any) => {
           />
         </Form.Item>
 
-        {/* TRẠNG THÁI */}
         <Form.Item
           name="status"
           label="Trạng thái"

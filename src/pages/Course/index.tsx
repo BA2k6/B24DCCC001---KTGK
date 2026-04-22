@@ -48,22 +48,22 @@ const Page = ({ dispatch, course }: any) => {
     setEditing(null);
   };
 
-  // SEARCH
+ 
   let filtered = course.list.filter((c: any) =>
     c.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  // FILTER TEACHER
+
   if (teacherFilter) {
     filtered = filtered.filter((c: any) => c.teacher === teacherFilter);
   }
 
-  // FILTER STATUS
+ 
   if (statusFilter) {
     filtered = filtered.filter((c: any) => c.status === statusFilter);
   }
 
-  // SORT
+ 
   if (sortOrder === 'asc') {
     filtered = [...filtered].sort((a, b) => a.students - b.students);
   } else if (sortOrder === 'desc') {
@@ -72,7 +72,7 @@ const Page = ({ dispatch, course }: any) => {
 
   return (
     <div style={{ padding: 20 }}>
-      {/* FILTER BAR */}
+     
       <div className="filter-bar">
         <Input
           placeholder="Tìm kiếm khóa học"
@@ -81,7 +81,7 @@ const Page = ({ dispatch, course }: any) => {
           onChange={(e) => setSearch(e.target.value)}
         />
 
-        {/* TEACHER FILTER */}
+        
         <Select
           placeholder="Giảng viên"
           allowClear
@@ -94,7 +94,7 @@ const Page = ({ dispatch, course }: any) => {
           <Option value="Tran Thi B">Tran Thi B</Option>
         </Select>
 
-        {/* STATUS FILTER */}
+   
         <Select
           placeholder="Trạng thái"
           value={statusFilter || undefined}
@@ -107,7 +107,7 @@ const Page = ({ dispatch, course }: any) => {
           <Option value="PAUSED">Tạm dừng</Option>
         </Select>
 
-        {/* SORT */}
+       
         <Select
           placeholder="Sắp xếp học viên"
           allowClear
@@ -132,7 +132,7 @@ const Page = ({ dispatch, course }: any) => {
         </Button>
       </div>
 
-      {/* TABLE */}
+    
       <CourseTable
         data={filtered}
         onEdit={(c: any) => {
@@ -144,7 +144,7 @@ const Page = ({ dispatch, course }: any) => {
         }
       />
 
-      {/* FORM */}
+     
       <CourseForm
         visible={visible}
         initialValues={editing}

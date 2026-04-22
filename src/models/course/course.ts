@@ -15,13 +15,12 @@ export default {
   },
 
   effects: {
-    // LOAD
+  
     *loadCourses(_: any, { put }: any): any {
-      const data = getCourses(); // localStorage sync → KHÔNG cần yield
+      const data = getCourses(); 
       yield put({ type: 'setCourses', payload: data });
     },
 
-    // ADD
     *addCourse({ payload }: any, { select, put }: any): any {
       const list = yield select((state: any) => state.course.list);
 
@@ -35,7 +34,7 @@ export default {
       });
     },
 
-    // UPDATE
+
     *updateCourse({ payload }: any, { select, put }: any): any {
       const list = yield select((state: any) => state.course.list);
 
@@ -51,7 +50,7 @@ export default {
       });
     },
 
-    // DELETE
+  
     *deleteCourse({ payload }: any, { select, put }: any): any {
       const list = yield select((state: any) => state.course.list);
 
